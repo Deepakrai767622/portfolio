@@ -17,13 +17,16 @@ body {
 header {
   background-attachment: fixed;
   .banner {
-    background: var(--light-banner);
-    background-size: cover;
-    background-position: center;
+    background-color: var(--light-color);
     width: 100%;
     height: 100%;
     position: relative;
     z-index: -1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .header-inner {
@@ -158,6 +161,51 @@ header {
     }
   }
 }
+
+//  svg animation ___________
+
+#laptop {
+  animation: plant 1.5s ease infinite alternate;
+}
+
+#pen {
+  animation: plant 1.5s ease infinite alternate 0.5s;
+}
+
+#clip,
+#clip_1,
+#clip_2,
+#clip_3,
+#clip_4,
+#clip_5,
+#clip_6,
+#clip_8,
+#clip_7,
+#clip_9 {
+  animation: me 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes plant {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-3deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+
+// svg animation /////////////
 
 .dots {
   width: 100%;

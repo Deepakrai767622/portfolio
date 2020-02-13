@@ -4,8 +4,8 @@ html {
 
   --lightBtn: #00dbbf;
   --lightBg: #fff;
+  --light-color: rgba((0, 219, 191), 0.5);
   --lightColor: #343434;
-  --light-banner: url(../img/banner/background.svg) no-repeat;
   --light-bg-skill: #f0f0f0;
   --light-banner-footer: url(../img/Website-light.png) no-repeat;
   // --work-background: linear-gradient(to right, #e2e2e2, #c9d6ff);
@@ -16,8 +16,8 @@ html[data-theme="dark"] {
   background: var(--lightBg);
   --lightBtn: #546b85;
   --lightBg: #042831;
+  --lightBanner: linear-gradient(to top lef, #00917a, #003c4b);
   --lightColor: #fff;
-  --light-banner: url(../img/banner/background-dark.svg) no-repeat;
   --light-bg-skill: #494949;
   --light-banner-footer: url(../img/Website.png) no-repeat;
   --work-background: linear-gradient(to left top, #232526, #414345);
