@@ -1,0 +1,1097 @@
+.whitespace {
+  display: block;
+  height: 30px; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+a {
+  font-family: "Roboto Condensed";
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h3 {
+  font-family: "Roboto Condensed"; }
+
+p {
+  font-family: "Roboto Condensed"; }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5% 0 5%; }
+
+.heading-h {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin: 0 0 50px 0;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  width: 100%; }
+
+.heading-w {
+  color: #323232;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  width: 100%; }
+
+.menu-btn {
+  float: right;
+  position: relative;
+  right: 15px;
+  top: 15px;
+  z-index: 99999;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  @media screen and (min-width: 765px) {
+    .menu-btn {
+      visibility: hidden; } }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 2px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(90deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #2C3A47;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    color: #fff;
+    text-decoration-line: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #f368e0; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, verdana, sans-serif; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #f2f2f2; }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 990;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); }
+  header .header-inner {
+    position: relative;
+    z-index: 100; }
+    header .header-inner #head {
+      width: 100%;
+      height: 70px; }
+    header .header-inner .scroll-event {
+      background: #f368e0; }
+    header .header-inner .logo {
+      float: left;
+      margin: 2px 10px 2px 0; }
+    header .header-inner nav {
+      width: 70%;
+      float: right; }
+      @media screen and (max-width: 768px) {
+        header .header-inner nav ul.hidden {
+          visibility: hidden; } }
+      header .header-inner nav ul.hidden {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        float: right; }
+        header .header-inner nav ul.hidden li a {
+          width: 80px;
+          height: 50px;
+          line-height: 60px;
+          color: #fff;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          text-align: center;
+          transition: all 0.5s ease-out;
+          border-top: 5px solid transparent; }
+          header .header-inner nav ul.hidden li a:hover {
+            border-top: 5px solid #f368e0; }
+
+.bg-heading {
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh; }
+  .bg-heading.bg-heading {
+    background: url(../dist/img/masco.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat; }
+  @media screen and (max-width: 500px) {
+    .bg-heading {
+      background-attachment: scroll; } }
+  .bg-heading .bg-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background: rgba(243, 104, 224, 0.9);
+    background-image: linear-gradient(to top, #2c3a47, #37517a, #6162aa, #a46bcf, #f368e0);
+    opacity: .8; }
+    @media screen and (max-width: 768px) {
+      .bg-heading .bg-inner {
+        width: 100%; } }
+    .bg-heading .bg-inner .banner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5%; }
+      .bg-heading .bg-inner .banner h1 {
+        font-size: 2.3rem;
+        font-weight: lighter;
+        margin: 10px 0;
+        text-align: justify;
+        text-transform: uppercase; }
+      .bg-heading .bg-inner .banner h2 {
+        font-size: 1.2rem;
+        font-weight: lighter;
+        margin-bottom: 20px;
+        text-align: center; }
+      .bg-heading .bg-inner .banner a {
+        color: #fff; }
+      .bg-heading .bg-inner .banner .pulse {
+        --color: #00a8ff;
+        --hover: #00a8ff;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%); }
+      .bg-heading .bg-inner .banner button.pulse {
+        color: #fff;
+        transition: 1s;
+        cursor: pointer;
+        letter-spacing: 2px;
+        font-weight: bolder; }
+        .bg-heading .bg-inner .banner button.pulse:hover, .bg-heading .bg-inner .banner button.pulse:focus {
+          border-color: var(--hover);
+          color: #00a8ff; }
+      .bg-heading .bg-inner .banner button.pulse {
+        background: none;
+        border: 3px solid;
+        font: inherit;
+        line-height: 1;
+        margin: 0.5em 0;
+        padding: 0.8em 2em; }
+      .bg-heading .bg-inner .banner h1 {
+        font-weight: 400; }
+      .bg-heading .bg-inner .banner code {
+        color: #00a8ff;
+        font: inherit; }
+      .bg-heading .bg-inner .banner .pulse:hover,
+      .bg-heading .bg-inner .banner .pulse:focus {
+        -webkit-animation: pulse 1s;
+        animation: pulse 1s;
+        box-shadow: 0 0 0 2em rgba(0, 168, 255, 0); }
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover); } }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover); } }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover); } }
+section.about {
+  width: 70%;
+  height: auto;
+  clear: both;
+  margin: 0 auto; }
+  @media screen and (max-width: 768px) {
+    section.about {
+      width: 96%; } }
+  section.about h2 {
+    text-align: center;
+    margin: 20px; }
+  section.about p {
+    font-weight: lighter;
+    font-size: 14px;
+    padding-bottom: 20px;
+    line-height: 30px; }
+
+div.product {
+  position: relative;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  padding-top: 10px;
+  background: #fcdef8; }
+  div.product a {
+    padding: 12px 20px;
+    background: #f368e0;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff; }
+  @media screen and (max-width: 768px) {
+    div.product {
+      height: 100%; } }
+  div.product .product-inner {
+    width: 80%;
+    height: 550px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; }
+    @media screen and (max-width: 768px) {
+      div.product .product-inner {
+        width: 100%;
+        height: auto;
+        flex-direction: column; } }
+    div.product .product-inner .box {
+      width: 24%;
+      height: 370px;
+      color: #fff;
+      transition: all 0.5s ease-out;
+      border-radius: 15px; }
+      @media screen and (max-width: 768px) {
+        div.product .product-inner .box {
+          width: 100%;
+          height: 300px;
+          border-radius: 0;
+          margin: 1px 0;
+          color: #333; } }
+      div.product .product-inner .box .box-inner {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: rgba(93, 122, 150, 0.7);
+        background: rgba(68, 68, 68, 0.3);
+        display: flex;
+        justify-content: center;
+        padding-top: 40%;
+        border-radius: 15px; }
+        @media screen and (max-width: 768px) {
+          div.product .product-inner .box .box-inner {
+            width: 100%;
+            height: 300px;
+            border-radius: 0;
+            padding: 100px 20px; } }
+        div.product .product-inner .box .box-inner h3 {
+          height: 55px;
+          padding: 8px 15px;
+          position: relative;
+          font-weight: lighter;
+          font-size: 2rem;
+          background: rgba(243, 104, 224, 0.8);
+          color: #fff;
+          border-radius: 10px; }
+    div.product .product-inner .box-1 {
+      background: url(../dist/img/2015.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product .product-inner .box-2 {
+      background: url(../dist/img/jakob-owens-583609-unsplash.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product .product-inner .box-3 {
+      background: url(../dist/img/frankie-valentine-686718-unsplash.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product .product-inner .box-4 {
+      background: url(../dist/img/lg-c8-oled-tv-hero.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+.info {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 30px; }
+  .info h2 {
+    text-align: center; }
+
+.info-inner {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .info-inner {
+      width: 95%;
+      flex-direction: column; } }
+
+.ser-img {
+  width: 50%; }
+
+.ser-img img {
+  width: 100%; }
+
+.services {
+  width: 50%;
+  padding-left: 2em;
+  margin-top: -70px; }
+
+.locate {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+  padding-top: 20px;
+  background: #536d86; }
+  .locate .locate-inner {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 50px; }
+    @media screen and (max-width: 768px) {
+      .locate .locate-inner {
+        width: 100%;
+        flex-direction: column; } }
+    .locate .locate-inner .box-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .locate .locate-inner .address {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .locate .locate-inner .address .aaaa {
+        border-right: 1px dotted #aaa;
+        margin-right: 25px;
+        padding-right: 25px; }
+      .locate .locate-inner .address address {
+        line-height: 2rem;
+        word-spacing: 0.5rem;
+        font-size: 1.2rem;
+        padding-left: 50px; }
+
+/* -------- slide section -------- */
+.press {
+  width: 100%;
+  height: 100%;
+  background: #fcdef8;
+  padding: 50px 0; }
+
+.press h2 {
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px; }
+
+.img-sec1 {
+  width: 100%;
+  height: 100%;
+  margin: 50px;
+  display: flex;
+  justify-content: center; }
+
+.img-sec1 img {
+  margin: 0 50px;
+  width: 2000px; }
+
+.container-s {
+  margin: 0 auto;
+  width: 1280px; }
+  @media screen and (max-width: 768px) {
+    .container-s {
+      width: 100%; } }
+
+.slides {
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 3rem auto;
+  overflow: scroll;
+  /*Manual scroller on mobile*/
+  padding: 1.5rem; }
+
+.slides__wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    .slides__wrapper {
+      width: 200%;
+      overflow: hidden; } }
+
+.slides__wrapper img {
+  height: 50px;
+  padding: 0 1rem; }
+
+.geomicon {
+  position: relative;
+  top: 0.1875em;
+  width: 1em;
+  height: 1em;
+  opacity: 1; }
+
+.callout {
+  color: #463d38;
+  font-weight: 700;
+  text-align: center; }
+
+.callout a {
+  color: #463d38;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.callout a:hover {
+  text-decoration: underline; }
+
+.slides {
+  overflow: hidden; }
+
+.slides__wrapper {
+  animation: slideshow 7s ease infinite; }
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(0%); }
+  12.5% {
+    transform: translateX(0%); }
+  25% {
+    transform: translateX(-12.5%); }
+  37.5% {
+    transform: translateX(-12.5%); }
+  50% {
+    transform: translateX(-25%); }
+  62.5% {
+    transform: translateX(-25%); }
+  75% {
+    transform: translateX(-50%); }
+  87.5% {
+    transform: translateX(-50%); }
+  100% {
+    transform: translateX(0); } }
+.contact {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  color: #343434;
+  z-index: 1;
+  padding: 50px; }
+  .contact input, .contact textarea {
+    width: 50%;
+    border: none;
+    outline: none;
+    padding: .666rem;
+    margin: 10px 0; }
+  .contact label {
+    color: Set-text-color(#f368e0); }
+  .contact .btn-1 {
+    padding: 12px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: 1s all; }
+    .contact .btn-1:hover {
+      background: #ef39d6;
+      border: 1px solid transparent;
+      color: #fff; }
+
+.social {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: url(../dist/img/social.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px 0 300px 0;
+  @import url(http://weloveiconfonts.com/api/?family=entypo); }
+  @media screen and (max-width: 768px) {
+    .social {
+      background-attachment: scroll; } }
+  .social h2 {
+    position: relative;
+    z-index: 22; }
+  .social:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 99, 99, 0.8); }
+  .social a[class*="entypo-"]:before {
+    font-family: "entypo", sans-serif; }
+  .social .container-f {
+    left: 50%;
+    margin: 0 0 0 -6em;
+    position: absolute;
+    top: 50%;
+    width: 12em;
+    z-index: 22; }
+
+/* ---------- SOCIAL ---------- */
+.social-inner {
+  position: relative;
+  height: 3em;
+  width: 13.5em;
+  padding-top: 30px; }
+
+.social-inner li {
+  display: block;
+  height: 4em;
+  line-height: 4em;
+  margin: -2.2em;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.7s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  text-align: center;
+  width: 4em; }
+
+.social-inner a {
+  color: #fffdf0;
+  display: block;
+  height: 4em;
+  line-height: 4em;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 4em;
+  text-decoration: none; }
+
+.social-inner li:hover {
+  -webkit-transform: scale(1.3, 1.3) rotate(45deg);
+  -moz-transform: scale(1.3, 1.3) rotate(45deg);
+  -ms-transform: scale(1.3, 1.3) rotate(45deg);
+  -o-transform: scale(1.3, 1.3) rotate(45deg);
+  transform: scale(1.3, 1.3) rotate(45deg); }
+
+.facebook {
+  background: #155b9d;
+  left: 0;
+  top: 0%; }
+
+.twitter {
+  background: #1a9ec4;
+  bottom: 0;
+  left: 25%; }
+
+.dribbble {
+  background: #d05f8f;
+  left: 50%;
+  top: 0%; }
+
+.behance {
+  background: #3f7aa3;
+  bottom: 0;
+  left: 75%; }
+
+.linked-in {
+  background: #157f9d;
+  left: 100%;
+  top: 0%; }
+
+footer {
+  width: 100%;
+  height: auto;
+  background: #182028;
+  color: #fff; }
+  footer .footer-inner {
+    padding-top: 10px; }
+  footer .footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0; }
+    footer .footer ul li h2 {
+      font-size: 18px;
+      font-weight: 200; }
+    footer .footer ul ul {
+      flex-direction: column; }
+      footer .footer ul ul li a {
+        color: #fff;
+        font-size: 16px;
+        font-weight: lighter; }
+  footer .foot {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    bottom: 0;
+    background: #ef39d6; }
+    footer .foot p {
+      color: #f2f2f2;
+      font-size: 18px;
+      text-align: center; }
+
+div.product-1 {
+  position: relative;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  padding-top: 10px;
+  background: #fcdef8;
+  margin-top: 40px; }
+  div.product-1 a {
+    padding: 12px 20px;
+    background: #f368e0;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff; }
+  @media screen and (max-width: 768px) {
+    div.product-1 {
+      height: 100%; } }
+  div.product-1 .product-inner {
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 0; }
+    @media screen and (max-width: 768px) {
+      div.product-1 .product-inner {
+        width: 100%;
+        height: auto;
+        flex-direction: column; } }
+    div.product-1 .product-inner .box {
+      width: 18%;
+      height: 250px;
+      color: #fff;
+      transition: all 0.5s ease-out;
+      border-radius: 15px;
+      margin-top: 10px; }
+      @media screen and (max-width: 768px) {
+        div.product-1 .product-inner .box {
+          width: 100%;
+          height: 300px;
+          border-radius: 0;
+          margin: 1px 0;
+          color: #333; } }
+      div.product-1 .product-inner .box .box-inner {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: rgba(93, 122, 150, 0.7);
+        background: rgba(68, 68, 68, 0.3);
+        display: flex;
+        justify-content: center;
+        padding-top: 40%;
+        border-radius: 15px; }
+        @media screen and (max-width: 768px) {
+          div.product-1 .product-inner .box .box-inner {
+            width: 100%;
+            height: 300px;
+            border-radius: 0;
+            padding: 100px 20px; } }
+        div.product-1 .product-inner .box .box-inner h3 {
+          height: 55px;
+          padding: 8px 15px;
+          position: relative;
+          font-weight: lighter;
+          font-size: 2rem;
+          background: rgba(243, 104, 224, 0.8);
+          color: #fff;
+          border-radius: 10px; }
+    div.product-1 .product-inner .box-1 {
+      background: url(../dist/img/2015.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-2 {
+      background: url(../dist/img/jakob-owens-583609-unsplash.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-3 {
+      background: url(../dist/img/frankie-valentine-686718-unsplash.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-4 {
+      background: url(../dist/img/lg-c8-oled-tv-hero.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-5 {
+      background: url(../dist/img/Consumer_Reports_-_Hamilton_Beach_Digital_toaster.tiff.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-6 {
+      background: url(../dist/img/f1091mdl2.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-7 {
+      background: url(../dist/img/images.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-8 {
+      background: url(../dist/img/4555.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-9 {
+      background: url(../dist/img/lg2149bb.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-10 {
+      background: url(../dist/img/cover.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-11 {
+      background: url(../dist/img/phil-6.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-12 {
+      background: url(../dist/img/pigeon-shiny-original-imaf2mrrbgbyfrfr.jpeg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-13 {
+      background: url(../dist/img/FC9352_01-IMS-en_IN.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-14 {
+      background: url(../dist/img/554466.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-15 {
+      background: url(../dist/img/776655.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-16 {
+      background: url(../dist/img/887766.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-17 {
+      background: url(../dist/img/Air-Conditioner-Service-Cen-8.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-18 {
+      background: url(../dist/img/aquaguard-eterniti-water-purifier-500x500.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-19 {
+      background: url(../dist/img/dc-Cover-ltopn3nulf34a52j0jfrs4dsn6-20180328212539.Medi.jpeg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-20 {
+      background: url(../dist/img/Desktop-Computer-PNG-File-1024x787.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-21 {
+      background: url(../dist/img/download.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-22 {
+      background: url(../dist/img/download.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-23 {
+      background: url(../dist/img/EW23CS75QS-HOV_504_HERO.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-24 {
+      background: url(../dist/img/fan-png-clipart-5a224b7a051b45.9459018015121969860209.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-25 {
+      background: url(../dist/img/FC6130_01-IMS-en_IN.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-26 {
+      background: url(../dist/img/homasy-cordless-vacuum.w710.h473.2x.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-27 {
+      background: url(../dist/img/home-appliance-brands-top-name-brand-appliances-awesome-stand-blue-mixer.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-28 {
+      background: url(../dist/img/images1.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-29 {
+      background: url(../dist/img/images.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-30 {
+      background: url(../dist/img/item_XL_23350519_33230402.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-31 {
+      background: url(../dist/img/item_XL_7126341_5188720.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-32 {
+      background: url(../dist/img/jakob-owens-583609-unsplash.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-33 {
+      background: url(../dist/img/kisspng-laptop-acer-aspire-predator-personal-computer-inte-computer-5ad4bdf27770a2.3577740215238916984892.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-34 {
+      background: url(../dist/img/kisspng-table-fan-rechargeable-battery-home-appliance-desk-fan-5abd378d5e2911.8742401115223499653857.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-35 {
+      background: url(../dist/img/kitchenaid-mixer.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-36 {
+      background: url(../dist/img/NORA-SW-1-300x300.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-37 {
+      background: url(../dist/img/LED-Television-PNG-Transparent-Picture.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-38 {
+      background: url(../dist/img/png-dishwasher-dishwasher-png-308.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-39 {
+      background: url(../dist/img/ranges.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-40 {
+      background: url(../dist/img/refrigerator_PNG9057.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-41 {
+      background: url(../dist/img/refrigerator_PNG9062.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-42 {
+      background: url(../dist/img/Rice-Cookers-index-new.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-43 {
+      background: url(../dist/img/SDA_categoryThumbnail250.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-44 {
+      background: url(../dist/img/slc_hero-appliancesAndVacuums.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-45 {
+      background: url(../dist/img/tiny-home-kitchen-appliances-list-of-kitchen-appliances-fresh-kitchen-appliances-name-list-tiny-house-dishwasher-small-kitchen-kitchen-terre-paris-reservation.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-46 {
+      background: url(../dist/img/Top-Loading-Washing-Machine-PNG-High-Quality-Image.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-47 {
+      background: url(../dist/img/turbo-grinder-blender-new.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-48 {
+      background: url(../dist/img/tv-hd-png-km0255uhd-0-png-km0255uhd-1-png-1200.png);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-49 {
+      background: url(../dist/img/yes-20boss-20big-250x250.gif);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    div.product-1 .product-inner .box-50 {
+      background: url(../dist/img/washing-machine-png-5a3a07b9580e84.43526357151375250536071101.jpg);
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+/*# sourceMappingURL=main.css.map */
