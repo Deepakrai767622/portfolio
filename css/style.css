@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway+Dots|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Slab:100,300,400,700&display=swap");
 html {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: var(--lightBg);
-  --lightBtn: #00dbbf;
   --lightBg: #fff;
   --light-color: rgba((0, 219, 191), 0.5);
   --lightColor: #343434;
@@ -15,13 +11,21 @@ html {
 
 html[data-theme="dark"] {
   background: var(--lightBg);
-  --lightBtn: #546b85;
-  --lightBg: #042831;
+  --lightBg: #0c2233;
   --lightBanner: linear-gradient(to top lef, #00917a, #003c4b);
   --lightColor: #fff;
   --light-bg-skill: #494949;
   --light-banner-footer: url(../img/Website.png) no-repeat;
   --work-background: linear-gradient(to left top, #232526, #414345);
+}
+
+.darkmode {
+  position: absolute;
+  top: 2.5%;
+  left: 42%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .darkmode input[type="checkbox"] {
@@ -30,13 +34,18 @@ html[data-theme="dark"] {
   visibility: hidden;
 }
 
+.darkmode span {
+  margin: 5px 30px;
+  color: var(--lightColor);
+}
+
 .darkmode label {
   cursor: pointer;
   text-indent: -9999px;
   width: 55px;
   height: 30px;
   display: block;
-  background: var(--lightBtn);
+  background: #00dbbf;
   border-radius: 100px;
   position: relative;
 }
@@ -353,7 +362,7 @@ header .head #toggle span:after,
 header .head #toggle span:before {
   width: 100%;
   height: 5px;
-  background-color: var(--lightColor);
+  background-color: #00dbbf;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-backface-visibility: hidden;
@@ -406,8 +415,8 @@ header main .text {
 }
 
 header main .text h1 {
-  font-family: "Raleway Dots", cursive;
-  font-weight: 100;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   color: var(--lightColor);
   font-size: 80px;
   margin-left: -8px;
@@ -418,7 +427,7 @@ header main .text h1 {
 header main .text h2 {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
-  font-weight: 400;
+  font-weight: 200;
   color: var(--lightColor);
   margin-top: 30px;
   -webkit-transition: all 0.5s;
@@ -437,17 +446,24 @@ header main .text p {
 
 header main .text .btn-banner {
   display: block;
-  width: 130px;
-  height: 40px;
-  background: var(--lightBtn);
-  line-height: 40px;
+  width: 200px;
+  height: 50px;
+  background: #00dbbf;
+  line-height: 50px;
   color: #fff;
   text-align: center;
-  border-radius: 10px;
-  font-size: 20px;
-  font-size: "Raleway", sans-serif;
-  font-weight: 500;
+  border-radius: 100px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
   margin-top: 25px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header main .text .btn-banner:hover {
+  background: #00a893;
 }
 
 #laptop {
@@ -582,7 +598,7 @@ header main .text .btn-banner {
 }
 
 .services .box i {
-  color: var(--lightBtn);
+  color: #00dbbf;
   -webkit-transition: inherit;
   transition: inherit;
   -webkit-transition-delay: 0s;
@@ -592,7 +608,7 @@ header main .text .btn-banner {
 }
 
 .services h4 {
-  color: var(--lightColor);
+  color: #00dbbf;
   -webkit-transition: inherit;
   transition: inherit;
   -webkit-transition-delay: 0.05s;
@@ -610,7 +626,7 @@ header main .text .btn-banner {
 }
 
 .readmore {
-  color: var(--lightColor);
+  color: #00dbbf;
   overflow: hidden;
   display: inline-block;
   font-size: 0.75rem;
@@ -629,7 +645,7 @@ header main .text .btn-banner {
           animation-duration: 0.4s;
   -webkit-animation-timing-function: cubic-bezier(0.6, 0.01, 0, 1);
           animation-timing-function: cubic-bezier(0.6, 0.01, 0, 1);
-  background-color: var(--lightBtn);
+  background-color: #00dbbf;
   bottom: 0;
   height: 0.125rem;
   margin: auto;
@@ -794,7 +810,7 @@ header main .text .btn-banner {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: var(--lightbg);
+  background: rgba(255, 255, 255, 0.02);
   overflow: hidden;
   border-radius: px;
   -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.2);
@@ -893,9 +909,9 @@ header main .text .btn-banner {
   height: 60px;
   margin: 0 10px;
   background: var(--lightBg);
-  color: var(--lightBtn);
+  color: #00dbbf;
   padding: 7px;
-  border: 4px solid var(--lightBtn);
+  border: 4px solid #00dbbf;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -82,7 +82,7 @@ header {
     #toggle span:before {
       width: 100%;
       height: 5px;
-      background-color: var(--lightColor);
+      background-color: #00dbbf;
       transition: all 0.3s;
       backface-visibility: hidden;
       border-radius: 2px;
@@ -118,8 +118,8 @@ header {
       top: 50%;
       transform: translate(0, -50%);
       h1 {
-        font-family: $raleway-d;
-        font-weight: 100;
+        font-family: $raleway;
+        font-weight: 400;
         color: var(--lightColor);
         font-size: 80px;
         margin-left: -8px;
@@ -129,7 +129,7 @@ header {
       h2 {
         font-family: $raleway;
         font-size: 50px;
-        font-weight: 400;
+        font-weight: 200;
         color: var(--lightColor);
         margin-top: 30px;
         transition: all 0.5s;
@@ -146,17 +146,23 @@ header {
 
       .btn-banner {
         display: block;
-        width: 130px;
-        height: 40px;
-        background: var(--lightBtn);
-        line-height: 40px;
+        width: 200px;
+        height: 50px;
+        background: $primary-color;
+        line-height: 50px;
         color: #fff;
         text-align: center;
-        border-radius: 10px;
-        font-size: $fs-20;
-        font-size: $raleway;
-        font-weight: 500;
+        border-radius: 100px;
+        font-size: $fs-16;
+        font-family: $raleway;
+        font-weight: 700;
+        letter-spacing: 2px;
         margin-top: 25px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          background: darken(#00dbbf, 10);
+        }
       }
     }
   }
@@ -318,14 +324,14 @@ header {
   margin: 20px;
 }
 .services .box i {
-  color: var(--lightBtn);
+  color: $primary-color;
   transition: inherit;
   transition-delay: 0s;
   margin: 20px 0;
   font-size: 70px;
 }
 .services h4 {
-  color: var(--lightColor);
+  color: $primary-color;
   transition: inherit;
   transition-delay: 0.05s;
   font-size: 24px;
@@ -337,7 +343,7 @@ header {
   transition-delay: 0.1s;
 }
 .readmore {
-  color: var(--lightColor);
+  color: $primary-color;
   overflow: hidden;
   display: inline-block;
   font-size: 0.75rem;
@@ -351,7 +357,7 @@ header {
   animation-fill-mode: forwards;
   animation-duration: 0.4s;
   animation-timing-function: cubic-bezier(0.6, 0.01, 0, 1);
-  background-color: var(--lightBtn);
+  background-color: $primary-color;
   bottom: 0;
   height: 0.125rem;
   margin: auto;
@@ -444,7 +450,7 @@ header {
     display: flex;
     justify-content: center;
     // background: var(--light-bg-skill);
-    background: var(--lightbg);
+    background: rgba(255, 255, 255, 0.02);
     overflow: hidden;
     border-radius: px;
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.2);
@@ -526,9 +532,9 @@ header {
         height: 60px;
         margin: 0 10px;
         background: var(--lightBg);
-        color: var(--lightBtn);
+        color: $primary-color;
         padding: 7px;
-        border: 4px solid var(--lightBtn);
+        border: 4px solid $primary-color;
         border-radius: 50%;
         display: flex;
         justify-content: center;
