@@ -11,7 +11,7 @@ html {
 
 html[data-theme="dark"] {
   background: var(--lightBg);
-  --lightBg: #0c2233;
+  --lightBg: #252e2b;
   --lightBanner: linear-gradient(to top lef, #00917a, #003c4b);
   --lightColor: #fff;
   --light-bg-skill: #494949;
@@ -22,7 +22,7 @@ html[data-theme="dark"] {
 .darkmode {
   position: absolute;
   top: 2.5%;
-  left: 42%;
+  left: 45%;
   display: flex;
 
   input[type="checkbox"] {
@@ -32,8 +32,16 @@ html[data-theme="dark"] {
   }
 
   span {
-    margin: 5px 30px;
     color: var(--lightColor);
+    font-size: 14px;
+  }
+
+  span.dark {
+    margin: 7px 15px;
+  }
+
+  span.light {
+    margin: 7px 5px;
   }
 
   label {

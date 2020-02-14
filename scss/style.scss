@@ -12,27 +12,30 @@ body {
   font-family: $raleway;
   font-size: 18px;
   font-weight: 200;
+  overflow-x: hidden;
 }
 
 header {
   background-attachment: fixed;
+  width: 100vw;
+  max-height: 100vh;
   .banner {
     background-color: var(--light-color);
-    width: 100%;
-    height: 100%;
-    position: relative;
+    position: absolute;
+    top: 37%;
+    right: 5%;
     z-index: -1;
 
-    svg {
-      width: 100%;
-      height: 100%;
-    }
+    // svg {
+    //   width: 700px;
+    //   height: 500px;
+    // }
   }
 
   .header-inner {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -40,6 +43,8 @@ header {
 
   // head start
   .head {
+    width: 100%;
+    height: 100%;
     padding: 30px;
 
     .head-inner {
@@ -170,44 +175,79 @@ header {
 
 //  svg animation ___________
 
-#laptop {
-  animation: plant 1.5s ease infinite alternate;
+#bar-1 {
+  width: 200px;
+  animation: bar 1.5s ease infinite alternate;
 }
 
-#pen {
-  animation: plant 1.5s ease infinite alternate 0.5s;
+#bar-2 {
+  animation: bar 1.5s ease infinite alternate;
 }
 
-#clip,
-#clip_1,
-#clip_2,
-#clip_3,
-#clip_4,
-#clip_5,
-#clip_6,
-#clip_8,
-#clip_7,
-#clip_9 {
-  animation: me 1s ease-in-out infinite alternate;
-  transform-origin: bottom;
+#bar-3 {
+  animation: bar 1.5s ease infinite alternate;
+}
+
+#bar-4 {
+  animation: bar 1.5s ease infinite alternate;
+}
+
+#bar-5 {
+  animation: bar 1.5s ease-in-out infinite alternate;
+  transform-origin: left;
+}
+
+@keyframes bar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 50px;
+  }
+}
+
+#circle-1 {
+  animation: plant 3s ease-in-out infinite alternate 0.5s;
+  transform-origin: center;
+}
+
+#circle-2 {
+  animation: plant 2s ease-in-out infinite alternate 0.6s;
+  transform-origin: center;
 }
 
 @keyframes plant {
   from {
-    transform: translateY(0);
+    transform: scale(1);
   }
 
   to {
-    transform: translateY(-30%);
+    transform: scale(1.2);
   }
+}
+
+#clip {
+  animation: me 1.3s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+#clip-1 {
+  animation: me 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+#clip-2 {
+  animation: me 0.8s ease-in-out infinite alternate;
+  transform-origin: bottom;
 }
 
 @keyframes me {
   from {
-    transform: rotateZ(-3deg);
+    transform: rotateZ(-1deg);
   }
   to {
-    transform: rotateZ(3deg);
+    transform: rotateZ(1deg);
   }
 }
 
@@ -317,7 +357,7 @@ header {
 .services .box {
   width: 400px;
   height: auto;
-  background-color: var(--lightBg);
+  background-color: rgba(255, 255, 255, 0.01);
   overflow: hidden;
   transition: 0.3s ease;
   padding: 20px;
@@ -331,7 +371,7 @@ header {
   font-size: 70px;
 }
 .services h4 {
-  color: $primary-color;
+  color: var(--lightColor);
   transition: inherit;
   transition-delay: 0.05s;
   font-size: 24px;

@@ -11,7 +11,7 @@ html {
 
 html[data-theme="dark"] {
   background: var(--lightBg);
-  --lightBg: #0c2233;
+  --lightBg: #252e2b;
   --lightBanner: linear-gradient(to top lef, #00917a, #003c4b);
   --lightColor: #fff;
   --light-bg-skill: #494949;
@@ -22,7 +22,7 @@ html[data-theme="dark"] {
 .darkmode {
   position: absolute;
   top: 2.5%;
-  left: 42%;
+  left: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,8 +35,16 @@ html[data-theme="dark"] {
 }
 
 .darkmode span {
-  margin: 5px 30px;
   color: var(--lightColor);
+  font-size: 14px;
+}
+
+.darkmode span.dark {
+  margin: 7px 15px;
+}
+
+.darkmode span.light {
+  margin: 7px 5px;
 }
 
 .darkmode label {
@@ -285,35 +293,35 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 200;
+  overflow-x: hidden;
 }
 
 header {
   background-attachment: fixed;
+  width: 100vw;
+  max-height: 100vh;
 }
 
 header .banner {
   background-color: var(--light-color);
-  width: 100%;
-  height: 100%;
-  position: relative;
+  position: absolute;
+  top: 37%;
+  right: 5%;
   z-index: -1;
 }
 
-header .banner svg {
-  width: 100%;
-  height: 100%;
-}
-
 header .header-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   top: 0;
   left: 0;
   overflow: hidden;
 }
 
 header .head {
+  width: 100%;
+  height: 100%;
   padding: 30px;
   /* Important styles */
   /* on activation */
@@ -466,73 +474,128 @@ header main .text .btn-banner:hover {
   background: #00a893;
 }
 
-#laptop {
-  -webkit-animation: plant 1.5s ease infinite alternate;
-          animation: plant 1.5s ease infinite alternate;
+#bar-1 {
+  width: 200px;
+  -webkit-animation: bar 1.5s ease infinite alternate;
+          animation: bar 1.5s ease infinite alternate;
 }
 
-#pen {
-  -webkit-animation: plant 1.5s ease infinite alternate 0.5s;
-          animation: plant 1.5s ease infinite alternate 0.5s;
+#bar-2 {
+  -webkit-animation: bar 1.5s ease infinite alternate;
+          animation: bar 1.5s ease infinite alternate;
 }
 
-#clip,
-#clip_1,
-#clip_2,
-#clip_3,
-#clip_4,
-#clip_5,
-#clip_6,
-#clip_8,
-#clip_7,
-#clip_9 {
+#bar-3 {
+  -webkit-animation: bar 1.5s ease infinite alternate;
+          animation: bar 1.5s ease infinite alternate;
+}
+
+#bar-4 {
+  -webkit-animation: bar 1.5s ease infinite alternate;
+          animation: bar 1.5s ease infinite alternate;
+}
+
+#bar-5 {
+  -webkit-animation: bar 1.5s ease-in-out infinite alternate;
+          animation: bar 1.5s ease-in-out infinite alternate;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+@-webkit-keyframes bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
+
+@keyframes bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
+
+#circle-1 {
+  -webkit-animation: plant 3s ease-in-out infinite alternate 0.5s;
+          animation: plant 3s ease-in-out infinite alternate 0.5s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+#circle-2 {
+  -webkit-animation: plant 2s ease-in-out infinite alternate 0.6s;
+          animation: plant 2s ease-in-out infinite alternate 0.6s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes plant {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes plant {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+#clip {
+  -webkit-animation: me 1.3s ease-in-out infinite alternate;
+          animation: me 1.3s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#clip-1 {
   -webkit-animation: me 1s ease-in-out infinite alternate;
           animation: me 1s ease-in-out infinite alternate;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
 }
 
-@-webkit-keyframes plant {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-  }
-}
-
-@keyframes plant {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-  }
+#clip-2 {
+  -webkit-animation: me 0.8s ease-in-out infinite alternate;
+          animation: me 0.8s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 @-webkit-keyframes me {
   from {
-    -webkit-transform: rotateZ(-3deg);
-            transform: rotateZ(-3deg);
+    -webkit-transform: rotateZ(-1deg);
+            transform: rotateZ(-1deg);
   }
   to {
-    -webkit-transform: rotateZ(3deg);
-            transform: rotateZ(3deg);
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
   }
 }
 
 @keyframes me {
   from {
-    -webkit-transform: rotateZ(-3deg);
-            transform: rotateZ(-3deg);
+    -webkit-transform: rotateZ(-1deg);
+            transform: rotateZ(-1deg);
   }
   to {
-    -webkit-transform: rotateZ(3deg);
-            transform: rotateZ(3deg);
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
   }
 }
 
@@ -589,7 +652,7 @@ header main .text .btn-banner:hover {
 .services .box {
   width: 400px;
   height: auto;
-  background-color: var(--lightBg);
+  background-color: rgba(255, 255, 255, 0.01);
   overflow: hidden;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -608,7 +671,7 @@ header main .text .btn-banner:hover {
 }
 
 .services h4 {
-  color: #00dbbf;
+  color: var(--lightColor);
   -webkit-transition: inherit;
   transition: inherit;
   -webkit-transition-delay: 0.05s;
