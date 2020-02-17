@@ -11,7 +11,7 @@ html {
 
 html[data-theme="dark"] {
   background: var(--lightBg);
-  --lightBg: #252e2b;
+  --lightBg: #051c2c;
   --lightBanner: linear-gradient(to top lef, #00917a, #003c4b);
   --lightColor: #fff;
   --light-bg-skill: #494949;
@@ -21,9 +21,10 @@ html[data-theme="dark"] {
 
 .darkmode {
   position: absolute;
-  top: 2.5%;
+  top: 30%;
   left: 45%;
   display: flex;
+  z-index: 100;
 
   input[type="checkbox"] {
     height: 0;
