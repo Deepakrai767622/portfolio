@@ -249,7 +249,7 @@ ul {
 
 .menu #menu {
   position: absolute;
-  top: 0;
+  top: 4px;
   right: 0;
   margin: 0;
   padding: 0;
@@ -257,8 +257,7 @@ ul {
   height: 110px;
   background-color: var(--lightBg);
   border-bottom-left-radius: 100%;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  border: 1px solid #00dbbf;
   -webkit-animation: not-checked-anim 0.2s both;
           animation: not-checked-anim 0.2s both;
   -webkit-transition: 0.5s;
@@ -602,14 +601,49 @@ header main .text .btn-banner:hover {
           transform-origin: bottom;
 }
 
+#clip-3 {
+  -webkit-animation: me 0.9s ease-in-out infinite alternate;
+          animation: me 0.9s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#clip-4 {
+  -webkit-animation: me 1.2s ease-in-out infinite alternate;
+          animation: me 1.2s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#clip-5 {
+  -webkit-animation: me 0.6s ease-in-out infinite alternate;
+          animation: me 0.6s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#clip-6 {
+  -webkit-animation: me 0.7s ease-in-out infinite alternate;
+          animation: me 0.7s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#clip-7 {
+  -webkit-animation: me 1.5s ease-in-out infinite alternate;
+          animation: me 1.5s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
 @-webkit-keyframes me {
   from {
     -webkit-transform: rotateZ(-1deg);
             transform: rotateZ(-1deg);
   }
   to {
-    -webkit-transform: rotateZ(1deg);
-            transform: rotateZ(1deg);
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
   }
 }
 
@@ -619,8 +653,68 @@ header main .text .btn-banner:hover {
             transform: rotateZ(-1deg);
   }
   to {
-    -webkit-transform: rotateZ(1deg);
-            transform: rotateZ(1deg);
+    -webkit-transform: rotateZ(2deg);
+            transform: rotateZ(2deg);
+  }
+}
+
+#rounder {
+  -webkit-animation: me-1 2s linear infinite;
+          animation: me-1 2s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes me-1 {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes me-1 {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+#heart {
+  -webkit-animation: me-2 0.65s linear infinite alternate;
+          animation: me-2 0.65s linear infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes me-2 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes me-2 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
@@ -936,10 +1030,7 @@ header main .text .btn-banner:hover {
 }
 
 .contact .contact-inner .f-banner {
-  width: 1000px;
-  height: 500px;
-  background: var(--light-banner-footer);
-  margin: 50px 0;
+  margin: 100px 0 150px 0;
   position: relative;
 }
 
@@ -958,7 +1049,7 @@ header main .text .btn-banner:hover {
 
 .contact .contact-inner .social {
   width: 100%;
-  height: 200px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1007,12 +1098,9 @@ header main .text .btn-banner:hover {
 }
 
 .contact .contact-inner .social span:hover {
-  border: 4px solid var(--lightBg);
-}
-
-.contact .contact-inner .social span:hover {
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+  border: 4px solid #00dbbf;
+  background-color: #00dbbf;
+  color: white;
 }
 
 .ui-btn {
