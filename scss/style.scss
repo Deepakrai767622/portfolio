@@ -122,10 +122,9 @@ header {
       h1 {
         font-family: $raleway;
         font-weight: 400;
-        color: var(--lightColor);
+        color: darken($primary-color, 15);
         font-size: 60px;
         letter-spacing: 10px;
-        margin-left: -8px;
         transition: all 0.5s;
       }
 
@@ -135,7 +134,7 @@ header {
         font-weight: 200;
         line-height: 40px;
         color: var(--lightColor);
-        margin-top: 30px;
+        margin-top: 20px;
         letter-spacing: 3px;
         transition: all 0.5s;
       }
@@ -586,3 +585,7 @@ header {
 // =============== Projects Import ==================//
 
 @import "../scss/project";
+
+.darkmode {
+  display: none;
+}

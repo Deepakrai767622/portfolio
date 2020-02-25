@@ -103,6 +103,13 @@ a {
   font-family: "Raleway", sans-serif;
 }
 
+p {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #434343;
+  letter-spacing: 1.5px;
+}
+
 ul {
   list-style: none;
 }
@@ -430,10 +437,9 @@ header main .text {
 header main .text h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  color: var(--lightColor);
+  color: #008f7c;
   font-size: 60px;
   letter-spacing: 10px;
-  margin-left: -8px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -444,7 +450,7 @@ header main .text h2 {
   font-weight: 200;
   line-height: 40px;
   color: var(--lightColor);
-  margin-top: 30px;
+  margin-top: 20px;
   letter-spacing: 3px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1044,6 +1050,7 @@ header main .text .btn-banner:hover {
   line-height: 30px;
   font-size: 20px;
   text-align: justify;
+  margin-top: 60px;
 }
 
 .project {
@@ -1112,5 +1119,9 @@ header main .text .btn-banner:hover {
   color: #e04958;
   letter-spacing: 2px;
   font-weight: 700;
+}
+
+.darkmode {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
