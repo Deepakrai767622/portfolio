@@ -108,6 +108,7 @@ p {
   font-weight: 300;
   color: #434343;
   letter-spacing: 1.5px;
+  font-size: 14px;
 }
 
 ul {
@@ -249,7 +250,7 @@ ul {
 
 .menu #menu {
   position: absolute;
-  top: 4px;
+  top: 3px;
   right: 0;
   margin: 0;
   padding: 0;
@@ -281,7 +282,11 @@ ul {
 
 .menu #menu-toggle:checked + #trigger ~ #menu > li,
 .menu a {
+  color: #00a893;
   display: block;
+  text-align: center;
+  position: relative;
+  z-index: 10000;
 }
 
 .menu [type="checkbox"]:not(:checked),
@@ -418,7 +423,7 @@ header main .banner {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20rem;
           flex: 1 1 20rem;
-  margin-top: 150px;
+  margin-top: 120px;
 }
 
 header main .banner svg {
@@ -430,7 +435,7 @@ header main .text {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20rem;
           flex: 1 1 20rem;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 header main .text h1 {
@@ -478,7 +483,7 @@ header main .text .btn-banner {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-top: 25px;
+  margin-top: 30px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -959,16 +964,23 @@ header main .text .btn-banner:hover {
   }
 }
 
-.skill h1 {
+.skill {
+  width: 100%;
+  height: 100%;
   padding: 50px 0;
+  margin-top: 50px;
+}
+
+.skill h1 {
   text-align: center;
   color: var(--lightColor);
+  padding-bottom: 100px;
 }
 
 .skill .skill-inner {
   width: 70%;
-  height: 700px;
-  padding: 0 50px;
+  height: auto;
+  padding: 10px 50px 30px 0;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -976,11 +988,12 @@ header main .text .btn-banner:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: rgba(255, 255, 255, 0.02);
+  background-color: #e5fffc;
   overflow: hidden;
-  border-radius: px;
-  -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset -5px 5px 40px rgba(0, 219, 191, 0.5), inset 5px -5px 20px rgba(0, 219, 191, 0.5);
+          box-shadow: inset -5px 5px 40px rgba(0, 219, 191, 0.5), inset 5px -5px 20px rgba(0, 219, 191, 0.5);
+  border: 10px solid rgba(0, 219, 191, 0.5);
+  border-radius: 50px;
 }
 
 .skill .skill-inner .skill-1 {

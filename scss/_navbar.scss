@@ -122,7 +122,7 @@
   }
   #menu {
     position: absolute;
-    top: 4px;
+    top: 3px;
     right: 0;
     margin: 0;
     padding: 0;
@@ -136,13 +136,20 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    &:after {
+    }
   }
   #menu-toggle:checked + #trigger + #burger + #menu {
     animation: checked-anim 1s ease both;
   }
   #menu-toggle:checked + #trigger ~ #menu > li,
   a {
+    color: darken($primary-color, 10);
     display: block;
+    text-align: center;
+    position: relative;
+    z-index: 10000;
   }
   [type="checkbox"]:not(:checked),
   [type="checkbox"]:checked {
