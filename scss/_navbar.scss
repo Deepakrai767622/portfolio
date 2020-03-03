@@ -100,8 +100,6 @@
     position: fixed;
     top: 0;
     right: 0;
-    margin: 0;
-    padding: 0;
     width: 110px;
     height: 110px;
     background-color: var(--lightBg);
@@ -120,7 +118,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  #menu-toggle:checked + #trigger + #burger + #menu {
+
+  .menu #menu-toggle:checked + #trigger + #burger + #menu {
     animation: checked-anim 1s ease both;
   }
   #menu-toggle:checked + #trigger ~ #menu > li,

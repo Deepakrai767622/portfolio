@@ -1,0 +1,23 @@
+.caption {
+    background: rgba(55,55,55,0.8);
+    padding: 1% 4%;
+}
+
+.caption h2 {
+    text-align: center;
+}
+.caption h5 {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.section-search input {
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 90% !important;
+    border: #f4f4f4 3px solid !important;
+}
+
+.section-follow .fa-4x {
+    margin: 5px 10px;
+}
