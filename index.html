@@ -13,18 +13,23 @@
 
 <body>
     <header>
-        <div class="header-inner">
-            <div class="head">
-                <div class="container">
-                    <div class="head-inner">
-                        <div class="logo"><img src="img/logo.svg" alt=""></div>
-                        <div class="darkmode">
-                            <span class="light">Light Mode</span>
-                            <input class="container_toggle" type="checkbox" id="switch" name="mode">
-                            <label for="switch">Toggle</label>
-                            <span class="dark">Dark Mode</span>
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
                 </div>
             </div>
         </div>
@@ -44,8 +49,7 @@
                     </a>
                 </div>
                 <div class="banner">
-                    <svg width="1200" height="800" viewBox="0 0 1500 500" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg width="1171" height="487" viewBox="0 0 1171 487" fill="none">
                         <g id="background">
                             <g clip-path="url(#clip0)">
                                 <path id="Vector"
@@ -166,20 +170,6 @@
         </div>
     </main>
     <!-- Main is here -->
-
-    <div class="menu">
-        <input type="checkbox" id="menu-toggle" />
-        <label id="trigger" for="menu-toggle"></label>
-        <label id="burger" for="menu-toggle"></label>
-        <ul id="menu">
-            <li class="menu__in">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-            </li>
-        </ul>
-    </div>
 
     <!-- Header End -->
 
@@ -441,60 +431,10 @@
     </div>
     <!-- Section end -->
 
-    <!-- javascript start -->
-    <script src="js/darkmode.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-        new fullpage('#fullpage', {
-            //options here
-            autoScrolling: true,
-            scrollHorizontally: true
-        });
+    <script src="./js/nav.js">
+
     </script>
-    <script>
-        var theToggle = document.getElementById('toggle');
 
-        // based on Todd Motto functions
-        // https://toddmotto.com/labs/reusable-js/
-
-        // hasClass
-        function hasClass(elem, className) {
-            return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-        }
-        // addClass
-        function addClass(elem, className) {
-            if (!hasClass(elem, className)) {
-                elem.className += ' ' + className;
-            }
-        }
-        // removeClass
-        function removeClass(elem, className) {
-            var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
-            if (hasClass(elem, className)) {
-                while (newClass.indexOf(' ' + className + ' ') >= 0) {
-                    newClass = newClass.replace(' ' + className + ' ', ' ');
-                }
-                elem.className = newClass.replace(/^\s+|\s+$/g, '');
-            }
-        }
-        // toggleClass
-        function toggleClass(elem, className) {
-            var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
-            if (hasClass(elem, className)) {
-                while (newClass.indexOf(" " + className + " ") >= 0) {
-                    newClass = newClass.replace(" " + className + " ", " ");
-                }
-                elem.className = newClass.replace(/^\s+|\s+$/g, '');
-            } else {
-                elem.className += ' ' + className;
-            }
-        }
-
-        theToggle.onclick = function () {
-            toggleClass(this, 'on');
-            return false;
-        }
-    </script>
 </body>
 
 </html>

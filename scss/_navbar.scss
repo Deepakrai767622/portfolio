@@ -1,120 +1,108 @@
-.menu {
-  @keyframes checked-anim {
-    50% {
-      width: 100%;
-      height: 100%;
-    }
-    100% {
-      width: 100%;
-      height: 100%;
-      border-radius: 0;
-    }
-  }
-  @keyframes not-checked-anim {
-    0% {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  li,
-  a {
-    margin: 75px 0 -55px 0;
-    color: var(--lightColor);
-    font-weight: 700;
-    line-height: 1.8;
-    text-decoration: none;
-    text-transform: none;
-    list-style: none;
-    outline: 0;
-    display: none;
-    position: relative;
-    z-index: 1000000000000;
-  }
-  li {
-    width: 230px;
-    text-indent: 56px;
-  }
-  a:focus {
+header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  display: none;
+  margin-top: 15px;
+}
+
+.line {
+  width: 40px;
+  height: 7px;
+  background-color: #333;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.logo {
+  img {
+    width: 50px;
     display: block;
-    color: #333;
-    background-color: #eee;
-    transition: all 0.5s;
+    margin-top: 15px;
+  }
+}
+
+.navigation {
+  transition: all 0.6s ease-in-out;
+}
+
+.navigation ul {
+  display: flex;
+}
+
+.navigation ul li {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #343434;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 100%;
+  padding: 2rem;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.navigation ul li a:hover {
+  border: 1px solid $primary-color;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 0 1rem;
   }
 
-  #trigger,
-  #burger,
-  #burger:before,
-  #burger:after {
+  .navigation {
     position: absolute;
-    top: 25px;
-    right: 25px;
-    background: var(--lightColor);
-    width: 30px;
-    height: 5px;
-    transition: 0.5s ease;
-    cursor: pointer;
-    z-index: 1;
-  }
-  #trigger {
-    height: 25px;
-    background: none;
-  }
-  #burger:before {
-    content: " ";
-    top: 10px;
-    left: 0;
-  }
-  #burger:after {
-    content: " ";
-    top: 20px;
-    left: 0;
-  }
-  #menu-toggle:checked + #trigger + #burger {
-    top: 35px;
-    transform: rotate(180deg);
-    transition: transform 0.5s ease;
+    top: 6rem;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #24252a;
   }
 
-  #menu-toggle:checked + #trigger + #burger:before {
-    width: 20px;
-    top: -2px;
-    left: 18px;
-    transform: rotate(45deg) translateX(-5px);
-    transition: transform 0.5s ease;
-  }
-  #menu-toggle:checked + #trigger + #burger:after {
-    width: 20px;
-    top: 2px;
-    left: 18px;
-    transform: rotate(-45deg) translateX(-5px);
-    transition: transform 0.5s ease;
-  }
-  #menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    width: 110px;
-    height: 110px;
-    background-color: var(--lightBg);
-    border-bottom-left-radius: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-    animation: not-checked-anim 0.2s both;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
+  .navigation ul {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  #menu-toggle:checked + #trigger + #burger + #menu {
-    animation: checked-anim 1s ease both;
+
+  .navigation ul li {
+    width: 100%;
+    text-align: center;
   }
-  #menu-toggle:checked + #trigger ~ #menu > li,
-  a {
+
+  .navigation ul li a {
+    /*     border-bottom: solid .25px rgba(211, 211, 211, .6); */
     display: block;
   }
-  [type="checkbox"]:not(:checked),
-  [type="checkbox"]:checked {
-    display: none;
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-top: 25px;
   }
 }

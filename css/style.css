@@ -115,180 +115,210 @@ ul {
   list-style: none;
 }
 
-@-webkit-keyframes checked-anim {
-  50% {
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-  }
-}
-
-@keyframes checked-anim {
-  50% {
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-  }
-}
-
-@-webkit-keyframes not-checked-anim {
-  0% {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@keyframes not-checked-anim {
-  0% {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.menu li,
-.menu a {
-  margin: 75px 0 -55px 0;
-  color: var(--lightColor);
-  font-weight: 700;
-  line-height: 1.8;
-  text-decoration: none;
-  text-transform: none;
-  list-style: none;
-  outline: 0;
-  display: none;
-  position: relative;
-  z-index: 1000000000000;
-}
-
-.menu li {
-  width: 230px;
-  text-indent: 56px;
-}
-
-.menu a:focus {
-  display: block;
-  color: #333;
-  background-color: #eee;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.menu #trigger,
-.menu #burger,
-.menu #burger:before,
-.menu #burger:after {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  background: var(--lightColor);
-  width: 30px;
-  height: 5px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.menu #trigger {
-  height: 25px;
-  background: none;
-}
-
-.menu #burger:before {
-  content: " ";
-  top: 10px;
-  left: 0;
-}
-
-.menu #burger:after {
-  content: " ";
-  top: 20px;
-  left: 0;
-}
-
-.menu #menu-toggle:checked + #trigger + #burger {
-  top: 35px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-.menu #menu-toggle:checked + #trigger + #burger:before {
-  width: 20px;
-  top: -2px;
-  left: 18px;
-  -webkit-transform: rotate(45deg) translateX(-5px);
-          transform: rotate(45deg) translateX(-5px);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-.menu #menu-toggle:checked + #trigger + #burger:after {
-  width: 20px;
-  top: 2px;
-  left: 18px;
-  -webkit-transform: rotate(-45deg) translateX(-5px);
-          transform: rotate(-45deg) translateX(-5px);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-.menu #menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  width: 110px;
-  height: 110px;
-  background-color: var(--lightBg);
-  border-bottom-left-radius: 100%;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  -webkit-animation: not-checked-anim 0.2s both;
-          animation: not-checked-anim 0.2s both;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+header {
+  width: 100%;
+  height: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.menu #menu-toggle:checked + #trigger + #burger + #menu {
-  -webkit-animation: checked-anim 1s ease both;
-          animation: checked-anim 1s ease both;
+.header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.menu #menu-toggle:checked + #trigger ~ #menu > li,
-.menu a {
-  display: block;
-}
-
-.menu [type="checkbox"]:not(:checked),
-.menu [type="checkbox"]:checked {
+.hamburger {
   display: none;
+  margin-top: 15px;
+}
+
+.line {
+  width: 40px;
+  height: 7px;
+  background-color: #333;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.logo img {
+  width: 50px;
+  display: block;
+  margin-top: 15px;
+}
+
+.navigation {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation ul li {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #343434;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 100%;
+  padding: 2rem;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.navigation ul li a:hover {
+  border: 1px solid #00dbbf;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 0 1rem;
+  }
+  .navigation {
+    position: absolute;
+    top: 6rem;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #24252a;
+  }
+  .navigation ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navigation ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .navigation ul li a {
+    /*     border-bottom: solid .25px rgba(211, 211, 211, .6); */
+    display: block;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 1350px) {
+  main {
+    width: 100%;
+    margin-top: 150px;
+  }
+  main .main-inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .banner {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20rem;
+            flex: 1 1 20rem;
+    padding-top: 120px;
+  }
+  main .banner svg {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  main .text {
+    padding-left: 100px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20rem;
+            flex: 1 1 20rem;
+    padding: 0;
+  }
+  main .text h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: #008f7c;
+    font-size: 60px;
+    letter-spacing: 10px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    text-align: center;
+  }
+  main .text h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 40px;
+    color: var(--lightColor);
+    margin-top: 20px;
+    letter-spacing: 3px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    text-align: left;
+  }
+  main .text p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    margin: 10px 0;
+    color: var(--lightColor);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    text-align: left;
+  }
+  main .text .btn-banner {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background: #00dbbf;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  main .text .btn-banner:hover {
+    background: #00a893;
+  }
 }
 
 * {
@@ -305,104 +335,14 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  width: 100vw;
-  min-height: 100%;
-}
-
-header .header-inner {
-  min-height: 1000px;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-header .head {
-  position: relative;
-  padding: 30px;
-  /* Important styles */
-  /* on activation */
-}
-
-header .head .head-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .head .logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  float: left;
-  color: var(--lightColor);
-}
-
-header .head #toggle {
-  display: block;
-  width: 28px;
-  min-height: 30px;
-  float: right;
-}
-
-header .head #toggle span:after,
-header .head #toggle span:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -9px;
-}
-
-header .head #toggle span:after {
-  top: 9px;
-}
-
-header .head #toggle span {
-  position: relative;
-  display: block;
-}
-
-header .head #toggle span,
-header .head #toggle span:after,
-header .head #toggle span:before {
-  width: 100%;
-  height: 5px;
-  background-color: #00dbbf;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  border-radius: 2px;
-}
-
-header .head #toggle.on span {
-  background-color: transparent;
-}
-
-header .head #toggle.on span:before {
-  -webkit-transform: rotate(45deg) translate(5px, 5px);
-          transform: rotate(45deg) translate(5px, 5px);
-}
-
-header .head #toggle.on span:after {
-  -webkit-transform: rotate(-45deg) translate(7px, -8px);
-          transform: rotate(-45deg) translate(7px, -8px);
-}
-
-header .head #toggle.on + #menu {
-  opacity: 1;
-  visibility: visible;
-}
-
 main {
-  position: absolute;
-  top: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 main .main-inner {
-  width: 100vw;
-  min-height: 100%;
+  width: 100%;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,21 +358,21 @@ main .main-inner {
 
 main .banner {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20rem;
-          flex: 1 1 20rem;
-  margin-top: 120px;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
 }
 
 main .banner svg {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 850px;
+  height: 500px;
 }
 
 main .text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 20rem;
-          flex: 1 1 20rem;
-  margin-top: 80px;
+  -webkit-box-flex: 10;
+      -ms-flex: 10 1 30rem;
+          flex: 10 1 30rem;
 }
 
 main .text h1 {
@@ -443,6 +383,7 @@ main .text h1 {
   letter-spacing: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  text-align: left;
 }
 
 main .text h2 {
@@ -455,6 +396,7 @@ main .text h2 {
   letter-spacing: 3px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  text-align: left;
 }
 
 main .text p {
@@ -465,6 +407,7 @@ main .text p {
   color: var(--lightColor);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  text-align: left;
 }
 
 main .text .btn-banner {
